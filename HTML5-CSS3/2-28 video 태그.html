@@ -1,0 +1,43 @@
+<!-- 
+[문제01] 비디오 태그란?
+1. 웹 페이지에서 동영사을 볼 수 있게 만들어 줌.
+
+[문제02] 윈도에 기본으로 내장되어 있는 동영상 파일 형식
+WMV 형식
+웹 브라우저는 WMV 형식을 지원하지 않음.
+
+[문제03] 웹 브라우저에서 지원하는 동영상 파일 형식
+MP4(H.264 + AAC), WebM(VP80+Vorbis),OGV(Theora+Vorbis)
+
+[문제04] video 태그 속성 ★
+1. 비디오 파일의 경로 지정:
+2. 비디오 준비 중일 때의 이미지 파일 경로 지정:
+3. 비디오를 재생하기 전에 모두 불러올지 지정:
+4. 비디오를 자동 재생할지 지정:
+5. 비디오를 반복 재생할지 지정:
+6. 비디오 재생 도구를 출력할지 지정:
+7. 비디오의 너비를 지정:
+8. 비디오의 높이를 지정:
+
+1. src, 2. poster, 3. preload, 4. autoplay
+5. loop, 6. controls, 7. width, 8.height
+
+[문제05] video 태그도 audio 태그처럼 웹 브라우저마다 지원하는
+비디오 형석이 다르므로 ( ) 태그를 사용해야 한다.
+source
+
+[문제06] video 태그 사용예 ★
+ -->
+ 	<video controls="controls">
+ 		<source src="Wildlife.mp4" type="video/mp4" />
+ 		<source src="Wildlife.webm" type="video/webm" />
+ 	</video>
+ <!-- 
+[문제07] placehold.it를 동영상 준비 화면으로 보여줘라.
+  -->
+   	<video poster="http://placehold.it/640x360"
+   			width="640" height="360" controls="controls">
+ 		<source src="Wildlife.mp4" type="video/mp4" />
+ 		<source src="Wildlife.webm" type="video/webm" />
+ 	</video>
+ 	
