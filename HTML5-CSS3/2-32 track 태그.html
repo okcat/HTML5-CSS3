@@ -1,0 +1,47 @@
+ <head>
+ 	<title>Video.js Basic</title>
+ 	<!-- link, script 태그 video.js 플러그인의 홈페이지에서 복사할수 있음. -->
+ 	<link href="http://vjs.zencdn.net/5.11.6/video-js.css" rel="stylesheet">
+ 	<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+ </head>
+<!--
+
+※ 예제가 동작 안함. 자막 안나옴..
+[문제01] track 태그란?
+1. video 태그에 자막을 표실할 때 사용하는 태그
+
+[문제02] srt 파일 이란?
+1. HTML5에서  사용하는 자막파일
+
+[문제03] srt 블록 형태 설명 하기
+답:
+자막번호
+시작시간 -> 종료시간
+자막
+빈 줄
+
+[문제04] 트랙 태그 사용 예(코드 작성) - 자막 안됨.
+-->
+    <video width="640" height="360" controls="controls">
+        <source src="Wildlife.mp4" type="video/mp4" />
+        <source src="Wildlife.webm" type="video/webm" />
+        <track kind="subtitles" src="track.srt" srclang="ko" label="Korean" />
+        <track kind="subtitles" src="track.srt" srclang="en" label="English" />
+        <track kind="subtitles" src="track.srt" srclang="jp" label="Japanese" />
+        <track kind="subtitles" src="track.srt" srclang="ch" label="Chinese" />
+    </video>
+    
+<!--
+[문제05] 모든 웹 브라우저에서 track 태그가 작동하게 하려면?
+video.js 플러그인 사용
+
+-->
+
+<!-- 
+[2-32 track 태그] ※ 예제가 동작 안됨. 자막안나옴..
+[문제01] track 태그란?
+[문제02] srt 파일 이란?
+[문제03] srt 블록 형태 설명 하기
+[문제04] 트랙 태그 사용 예(코드 작성) - 자막 안됨.
+[문제05] 모든 웹 브라우저에서 track 태그가 작동하게 하려면?
+ -->

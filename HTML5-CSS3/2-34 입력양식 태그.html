@@ -1,0 +1,338 @@
+<!--
+[문제01] 입력 양식  이란?
+1. 사용자에게 입력받는 공간을 의미
+2. form 태그를 사용해 생성
+
+[문제02] 입력 양식 태그란?
+1. 입력 양식을 만들 때 사용하는 태그
+
+[문제03] form 태그 작성
+-->
+<form>
+</form>
+<!-- 
+[문제04] 입력 양식에 데이터를 입력하고 쿼리 전송(제출) 버튼을 누르면 지정된 장소에 
+지정된 방법으로 전달됨. (1.화면 만들기 2.장소,방법, 어떻게 작성?)
+ -->
+ <form>
+ 	<input type="text" name="search" />
+ 	<input type="submit" />
+ </form>
+ <!-- 
+ 2. form태그 속성
+ action: 입력 데이터의 전달 위치를 지정합니다.
+ method: 입력 데이터의 전달 방식을 선택합니다.
+ 
+[문제05] GET, POST 차이
+1. GET: 주소에 데이터를 입력해서 보내는 방식, 데이터 크기 한정 됨.
+2. POST: 데이터 용량 제한이 없음.
+
+-->
+<form method="get">
+ 	<input type="text" name="search" />
+ 	<input type="submit" />
+ </form>
+<!-- 
+[문제06] input 태그
+1. 사용자에게 정보를 입력받는 기능을 수행하는 태그
+2. 입력 양식의 형태를 지정할 때는 type 속성을 사용
+
+[문제07] 사용자에게 이름, 비밀번호, 파일을 입력받는 태그를 작성하라.
+-->
+<form>
+	<input type="text" name="name" /><br />
+	<input type="password" name="password" /><br />
+	<input type="file" name="file" /><br />
+	<input type="submit" />
+</form>
+<!-- 
+[문제08] input 태그의 속성값 (HTML4,5)
+1. 버튼을 생성합니다.:
+2. 체크박스를 생성합니다.:
+3. 파일 입력 양식을 생성합니다.:
+4. 보이지 않습니다.:
+5. 이미지 형태를 생성합니다.:
+6. 비밀번호 입력 양식을 생성합니다.:
+7. 라디오 버튼을 생성합니다.:
+8. 초기화 버튼을 생성합니다.:
+9. 제출 버튼을 생성합니다.:
+10. 글자 입력 양식을 생성합니다.:
+
+1. button
+2. checkbox
+3. file
+4. hidden
+5. image
+6. password
+7. radio
+8. reset
+9. submit
+10. text
+ -->
+ 
+ <form>
+ 	글자입력양식:<input type="text" /><br/>
+ 	버튼:<input type="button" /><br />
+ 	체크박스:<input type="checkbox" /><br />
+ 	파일 입력 양식:<input type="file" /><br />
+ 	히든:<input type="hidden" /><br />
+ 	이미지형태생성:<input type="image" /><br />
+ 	비밀번호:<input type="password" /><br>
+ 	라디오버튼:<input type="radio" /><br />
+ 	초기화버튼:<input type="reset" /><br />
+ 	제출버튼:<input type="submit" />
+ </form>
+<!-- 
+[문제09] 일반적으로 input 태그는 ( )태그 안에 있어야 합니다. 하지만 최근 ( ) 기술의 활성화로
+인해 이 규칙을 지키지 않는 경우가 늘고 있습니다.
+form, Ajax
+
+[문제10] label 태그 어디에 사용?
+1. input 태그 설명하는 데사용
+
+[문제11] label 태그 사용 방법
+1. 어떠한 input 태그를 설명하고 있는지 표시해 줘야 한다. 
+2. input 태그에 id속성을 입력하고 label 태그에 for 속성을 입력한다.
+코드를 실행하고 label 태그 클릭하면 자동으로 input 태그에 초점이 맞춰진다.
+
+[문제12] 이름을 입력받는 입력 태그를 생성하고, "이름" 레이블을 생성하고, 
+레이블을 클릭하면 입력태그가 선택 되도록 태그를 작성하라.
+ -->
+<form>
+	<label for="name">이름</label>
+	<input id="name" type="text" />
+</form>
+
+<!-- 
+[문제13] HTML5에서 추가된 입력 양식의 type 속성값
+1. 색상 선택 양식을 생성합니다. :
+2. 일 선택 양식을 생성합니다.:
+3. 날짜 선택 양식을 생성합니다.
+4. 지역 날짜 선택 양식을 생성합니다.
+5. 이메일 입력 양식을 생성합니다.:
+6. 월 선택 양식을 생성합니다.:
+7. 숫자 생성 양식을 생성합니다.:
+8. 범위 선택 양식을 생성합니다.:
+9. 검색어 입력 양식을 생성합니다.:
+10. 전화번호 입력 양식을 생성합니다.:
+11. 시간 선택 양식을 생성합니다.:
+12. URL 주소 입력 양식을 생성합니다.:
+13. 주 선택 양식을 생성 합니다.
+
+1. color
+2. date
+3. datetime
+4. datetime-local
+5. email
+6. month
+7. number
+8. range
+9. search
+10. tel
+11. time
+12. url
+13. week
+ -->
+<form>
+	<label for="color">색상 선택 양식</label>
+	<input id="color" type="color" /><br />
+	<label for="date">일 선택 양식</label>
+	<input id="date" type="date" /><br />
+	<label for="datetime">날짜 선택 양식</label>
+	<input id="datetime" type="datetime" /><br />
+	<label for="datetime-local">지역 날짜 선택 양식</label>
+	<input id="datetime-local" type="datetime-local" /><br />	
+	<label for="email">이메일 입력 양식</label>
+	<input id="email" type="email" /><br />	
+	<label for="month">월 선택 양식</label>
+	<input id="month" type="month" /><br />
+	<label for="number">숫자 생성 양식</label>
+	<input id="number" type="number" /><br />
+	<label for="range">범위 선택 양식</label>
+	<input id="range" type="range" /><br />
+	<label for="search">검색어 입력 양식</label>
+	<input id="search" type="search" /><br />
+	<label for="tel">전화 번호 입력 양식</label>
+	<input id="tel" type="tel" /><br />
+	<label for="time">시간 선택 양식</label>
+	<input id="time" type="time" /><br />
+	<label for="url">URL 주소 입력 양식</label>
+	<input id="url" type="url" /><br />	
+	<label for="week">주 선택 양식</label>
+	<input id="week" type="week" /><br />
+</form>
+<!-- 
+[문제14] textarea 태그 어떨때 사용?
+1. input 태그가 아닌 입력 양식
+2. 여러 줄의 글자를 입력할 때 사용하는 태그
+
+[문제15] TextArea Text
+        TextARea Text 이렇게 TextArea에 글자가 입력된 TextArea생성하는 태그 작성하라.
+ -->
+ <form>
+ 	<textarea>TextArea Text
+TextArea Text</textarea>
+ </form>
+<!-- 
+[문제16] textarea 태그의 속성
+1. cols: 태그의 너비 지정
+2. rows: 태그의 높이 지정
+ 
+[문제17] select 태그
+1. 여러 개의 목록에서 몇 가지를 선택할 수 있는 입력 양식 요소
+
+[문제18] select태그와 함께 사용한는 태그
+1. 선택 양식을 생성합니다.
+2. 옵션을 그룹화 합니다.
+3. 옵션을 생성합니다.
+
+1. select
+2. optgroup
+3. option
+
+[문제19] 김밥, 떢볶이, 순대, 오뎅을 선택할수 있는 select box를 만들어라.
+  -->
+<form>
+	<select>
+		<option>김밥</option>
+		<option>떡볶이</option>
+		<option>순대</option>
+		<option>오뎅</option>
+	</select>
+</form>
+
+<!-- 
+[문제20] 김밤, 떢볶이, 순대, 오뎅 중 한가지만 말고 여러개를 선택하고 싶을 때는?
+어떻게 해야하지는 태그 작성
+- 스마트 폰에서는 어느 정도 예쁘게 나오지만 일반 데스크톱에서는 예쁘게 나오지 않음.
+- 따라서 데스크톱 웹 페이지 에서는 잘 사용하지 않음.
+ -->
+ <select multiple="multiple">
+	<option>김밥</option>
+	<option>떡볶이</option>
+	<option>순대</option>
+	<option>오뎅</option>
+ </select>
+ 
+<!-- 
+[문제21] HTML5(Multimedia Tag, Connectivity, Device Access)
+        CSS3(Animation, 3D Transform)
+        다음은 HTML5와 CSS3에서 추가된 기능이다. 셀렉트 박스에서 표기하라.(태그작성)
+    HTML5, CSS3는 선택되지 않음.(옵션그룹임)
+-->
+<select>
+	<optgroup label="HTML5">
+		<option>Multimedia Tag</option>
+		<option>Connectivity</option>
+		<option>Device Access</option>
+	</optgroup>
+	<optgroup label="CSS3">
+		<option>Animation</option>
+		<option>3D Transform</option>
+	</optgroup>
+</select>  
+<!-- 
+[문제22] 최근에는 일반적인 경우도 select 태그를 잘 사용하지 않음.
+select 태그를 사용하면 웹 페이지와 어울리게 만들기 힘드므로 자바스크립트를 
+사용해 하나하나 만듦. 옵션 선택 태그는 select 뿐 아니라 ( )을 사용해 만들수 있다.
+
+자바스크립트
+
+[문제23] 입력양식을 설명 하는 태그 2가지
+1. fieldset 태그, legend 태그
+2. legend태그는 fieldset 태그 내부에서만 사용할 수 있다. 다른 곳에도 사용할 수 있지만
+아무 효과가 없음.
+
+[문제24] 입력양식 --------------
+       | 이름 : __________  |
+       |이메일: __________  |
+       | 제출버튼                            |
+       --------------------
+       다음을 fieldset, legend, table, input 태그를 사용하여 만들어라.
+ -->
+<form>
+	<fieldset>
+		<legend>입력 양식</legend>
+		<table>
+			<tr>
+				<td><label for="name">이름</label></td>
+				<td><input id="name" type="text" /></td>
+			</tr>
+			<tr>
+				<td><label for="mail">이메일</label></td>
+				<td><input id="mail" type="email" /></td>
+			</tr>
+		</table>
+		<input type="submit">
+	</fieldset>
+</form>
+
+<!-- 
+[2-34 입력양식 태그]
+[문제01] 입력 양식  이란?
+[문제02] 입력 양식 태그란?
+[문제03] form 태그 작성
+[문제04] 입력 양식에 데이터를 입력하고 쿼리 전송(제출) 버튼을 누르면 지정된 장소에 
+지정된 방법으로 전달됨. (1.화면 만들기 2.장소,방법, 어떻게 작성?)
+[문제05] GET, POST 차이
+[문제06] input 태그
+[문제07] 사용자에게 이름, 비밀번호, 파일을 입력받는 태그를 작성하라.
+[문제08] input 태그의 속성값 (HTML4,5)
+1. 버튼을 생성합니다.:
+2. 체크박스를 생성합니다.:
+3. 파일 입력 양식을 생성합니다.:
+4. 보이지 않습니다.:
+5. 이미지 형태를 생성합니다.:
+6. 비밀번호 입력 양식을 생성합니다.:
+7. 라디오 버튼을 생성합니다.:
+8. 초기화 버튼을 생성합니다.:
+9. 제출 버튼을 생성합니다.:
+10. 글자 입력 양식을 생성합니다.:
+[문제09] 일반적으로 input 태그는 ( )태그 안에 있어야 합니다. 하지만 최근 ( ) 기술의 활성화로
+인해 이 규칙을 지키지 않는 경우가 늘고 있습니다.
+[문제10] label 태그 어디에 사용?
+[문제11] label 태그 사용 방법
+[문제12] 이름을 입력받는 입력 태그를 생성하고, "이름" 레이블을 생성하고, 
+레이블을 클릭하면 입력태그가 선택 되도록 태그를 작성하라.
+[문제13] HTML5에서 추가된 입력 양식의 type 속성값
+1. 색상 선택 양식을 생성합니다. :
+2. 일 선택 양식을 생성합니다.:
+3. 날짜 선택 양식을 생성합니다.
+4. 지역 날짜 선택 양식을 생성합니다.
+5. 이메일 입력 양식을 생성합니다.:
+6. 월 선택 양식을 생성합니다.:
+7. 숫자 생성 양식을 생성합니다.:
+8. 범위 선택 양식을 생성합니다.:
+9. 검색어 입력 양식을 생성합니다.:
+10. 전화번호 입력 양식을 생성합니다.:
+11. 시간 선택 양식을 생성합니다.:
+12. URL 주소 입력 양식을 생성합니다.:
+13. 주 선택 양식을 생성 합니다.
+[문제14] textarea 태그 어떨때 사용?
+[문제15] TextArea Text
+        TextARea Text 이렇게 TextArea에 글자가 입력된 TextArea생성하는 태그 작성하라.
+[문제16] textarea 태그의 속성
+[문제17] select 태그
+[문제18] select태그와 함께 사용한는 태그
+[문제19] 김밥, 떢볶이, 순대, 오뎅을 선택할수 있는 select box를 만들어라.
+[문제20] 김밤, 떢볶이, 순대, 오뎅 중 한가지만 말고 여러개를 선택하고 싶을 때는?
+어떻게 해야하지는 태그 작성
+- 스마트 폰에서는 어느 정도 예쁘게 나오지만 일반 데스크톱에서는 예쁘게 나오지 않음.
+- 따라서 데스크톱 웹 페이지 에서는 잘 사용하지 않음.
+[문제21] HTML5(Multimedia Tag, Connectivity, Device Access)
+        CSS3(Animation, 3D Transform)
+        다음은 HTML5와 CSS3에서 추가된 기능이다. 셀렉트 박스에서 표기하라.(태그작성)
+    HTML5, CSS3는 선택되지 않음.(옵션그룹임)
+[문제22] 최근에는 일반적인 경우도 select 태그를 잘 사용하지 않음.
+select 태그를 사용하면 웹 페이지와 어울리게 만들기 힘드므로 자바스크립트를 
+사용해 하나하나 만듦. 옵션 선택 태그는 select 뿐 아니라 ( )을 사용해 만들수 있다.
+[문제23] 입력양식을 설명 하는 태그 2가지
+
+[문제24] 입력양식 --------------
+       | 이름 : __________  |
+       |이메일: __________  |
+       | 제출버튼                            |
+       --------------------
+       다음을 fieldset, legend, table, input 태그를 사용하여 만들어라.
+
+-->
